@@ -1,0 +1,17 @@
+#blank {
+    text-align: center;
+    padding-top: 5rem;
+    width: 100%;
+    opacity: 0.25;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+#blank img {
+    width: 75%;
+}
+
+#blank * {
+    text-align: center;
+}

@@ -6,72 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Só Comprar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./socomprar.css">
+    <script src="./socomprar.js"></script>
 </head>
 <body>
     <header class="headerBar dark">
         <div class="appName">Só Comprar</div>
-        <div class="badge warning">3</div>
+        <div class="badge warning"><span id="estado">0</span></div>
     </header>
-    <nav class="navBar">
-        <div class="buttonGroup">
-            <button id="tab1" class="button active">Texto</button>
-            <button id="tab2" class="button">Botões</button>
-            <button id="tab3" class="button">Formulário</button>
-            <button id="tab4" class="button">Lista</button>
+    <div id="tela1" class="component">
+        <div class="componentHeader">
+            <h1 class="componentTitle">Minhas listas de compras</h1>
+            <button id="buttonAdic" class="button primary"><img src="./src/plus1.png"></button>
         </div>
-    </nav>
-    <div id="componente1" class="component">
-        <h1>Texto</h1>
-        <p>Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Aenean aliquam molestie leo, vitae iaculis nisl.</p>
-        <p>Mé faiz elementum girarzis, nisi eros vermeio.Cevadis im ampola pa arma uma pindureta.Si num tem leite então bota uma pinga aí cumpadi!A ordem dos tratores não altera o pão duris.</p>
-        <p>Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Casamentiss faiz malandris se pirulitá.Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
-        <p>Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Detraxit consequat et quo num tendi nada.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Casamentiss faiz malandris se pirulitá.</p>
-        <p>Diuretics paradis num copo é motivis de denguis.Aenean aliquam molestie leo, vitae iaculis nisl.Viva Forevis aptent taciti sociosqu ad litora torquent.Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.</p>
-    </div>
-    <div id="componente2" class="component hidden">
-    <h1>Botões</h1>
-    <div class="buttonGroup mt2 end">
-        <button class="button primary">primary</button>
-        <button class="button secondary">secondary</button>
-    </div>
-    <div class="buttonGroup mt2 end">
-        <button class="button success">success</button>
-        <button class="button warning">warning</button>
-        <button class="button danger">danger</button>
-    </div>
-    <div class="buttonGroup mt2">
-        <button class="button light">light</button>
-        <button class="button dark">dark</button>
-    </div>
-    </div>
-    <div id="componente3" class="component hidden">
-        <h1>Formulário</h1>
-        <div class="field mt1">
-            <label class="fifth">Nome</label>
-            <input class="valid" type="text" autocomplete="off" />
-        </div>
-        <div class="field mt1">
-            <label class="fifth">Sobrenome</label>
-            <input type="text" autocomplete="off" />
-        </div>
-        <div class="field mt1">
-            <label class="fifth">Senha</label>
-            <input class="invalid" type="password" />
-        </div>
-        <div class="buttonGroup end mt1">
-            <button class="button primary quarter">Entrar</button>
+        <div class="componentContent">
+            <div id="blank">
+                <img src="./src/shopping-cart.png"/>
+            <p>Nenhuma lista de compras cadastrada.</p>
+            </div>
+            <ul id="listaDeCompras" class="list hidden">
+            </ul>
         </div>
     </div>
-    <div id="componente4" class="component hidden">
-        <h1>Lista</h1>
-        <ul class="list mt1">
-            <li class="active">Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-        </ul>
+
+    <div id="tela2" class="component hidden">
+        <div class="componentHeader">
+            <h1 class="componentTitle">
+                Nova lista de compras
+            </h1>
+        </div>
+        <div class="componentContent">
+            <div class="field">
+                <label for="inputNovaLista">Nome da lista:</label>
+                <input id="inputNovaLista" type="text" placeholder="Ex: Compras do mês" autocomplete="off">
+            </div>
+            <div class="buttonGroup mt1 end">
+                <button id="buttonCanc1" class="button quarter light">Cancelar</button>
+                <button id="buttonIncluir1" class="button quarter primary" disabled>Incluir</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

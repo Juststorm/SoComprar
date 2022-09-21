@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Só Comprar</title>
+    <title>Dream Hardware</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+    <link rel="icon" type="image/png" href="./src/appicons/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Dream Hardware" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./src/appicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./src/appicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./src/appicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./src/appicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/appicons/apple-icon-180x180.png" />
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="./socomprar.css">
-    <script src="./socomprar.js"></script>
+    <link rel="stylesheet" href="./dreamhardware.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="./dreamhardware.js"></script>
 </head>
 <body>
     <header class="headerBar dark">
-        <div class="appName">Só Comprar</div>
+        <div class="appName">Dream Hardware</div>
         <div class="badge warning"><span id="estado">0</span></div>
     </header>
     <div id="tela1" class="component">
         <div class="componentHeader">
-            <h1 class="componentTitle">Minhas listas de compras</h1>
+            <h1 class="componentTitle">Lista de peças</h1>
             <button id="buttonAdic" class="button primary"><img src="./src/plus1.png"></button>
         </div>
         <div class="componentContent">
             <div id="blank">
                 <img src="./src/shopping-cart.png"/>
-            <p>Nenhuma lista de compras cadastrada.</p>
+            <p>Nenhuma peça de hardware cadastrada.</p>
             </div>
-            <ul id="listaDeCompras" class="list hidden">
+            <ul id="listaDePecas" class="list hidden">
             </ul>
         </div>
     </div>
@@ -34,19 +44,42 @@
     <div id="tela2" class="component hidden">
         <div class="componentHeader">
             <h1 class="componentTitle">
-                Nova lista de compras
+                Nova peça de hardware
             </h1>
         </div>
         <div class="componentContent">
             <div class="field">
-                <label for="inputNovaLista">Nome da lista:</label>
-                <input id="inputNovaLista" type="text" placeholder="Ex: Compras do mês" autocomplete="off">
+                <label for="inputNovaPeca">Descrição:</label>
+                <input id="inputNovaPeca" type="text" placeholder="Ex: RTX 3080 TI" autocomplete="off">
+            </div>
+            <div class="field mt1">
+                <label for="inputValorPeca">Valor:</label>
+                <input id="inputValorPeca" type="number"  step="any" placeholder="1000" autocomplete="off">
             </div>
             <div class="buttonGroup mt1 end">
                 <button id="buttonCanc1" class="button quarter light">Cancelar</button>
                 <button id="buttonIncluir1" class="button quarter primary" disabled>Incluir</button>
             </div>
         </div>
+    </div>
+
+    <div id="tela3" class="component hidden">
+        <div class="componentHeader">
+            <h1 class="componentTitle">
+                Editar peça de hardware
+            </h1>
+        </div>
+        <div class="componentContent">
+            <div class="field">
+                <label for="inputEditarPeca">Descrição da peça:</label>
+                <input id="inputEditarPeca" type="text" autocomplete="off">
+        </div>
+        <div class="buttonGroup end mt1">
+            <button id="buttonCanc2" class="button quarter light">Cancelar</button>
+            <button id="buttonSalvarAlt" class="button quarter primary">Salvar</button>
+        </div>
+        <div class="buttonGroup end mt1">
+            <button id="buttonExcluir" class="button quarter danger">Excluir</button>
     </div>
 </body>
 </html>

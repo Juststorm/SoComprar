@@ -193,6 +193,15 @@ p {
     border-radius: 0;
 }
 
+.busca {
+    width: 100%;
+    flex: 1;
+    height: 2rem;
+    color: #000;
+    border: thin solid #dce5e8;
+    border-radius: 0.35rem;
+}
+
 .field {
     display: flex;
     flex-direction: row;

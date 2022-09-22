@@ -24,7 +24,7 @@
 <body>
     <header class="headerBar dark">
         <div class="appName">Dream Hardware</div>
-        <div class="badge warning"><span id="estado">0</span></div>
+        <!--!<div class="badge warning"><span id="estado">0</span></div> -->
     </header>
     <div id="tela1" class="component">
         <div class="componentHeader">
@@ -36,11 +36,14 @@
                 <img src="./src/shopping-cart.png"/>
             <p>Nenhuma peça de hardware cadastrada.</p>
             </div>
-            <ul id="listaDePecas" class="list hidden">
+            <input class="busca hidden" id="barraDeBusca" onkeyup="barraBusca()" type="text"
+            name="search" placeholder="Pesquisar... (nome ou preço)">
+            <ul id="listaDePecas" class="list hidden mt1">
             </ul>
+            <h3 id="qtdPecas" class="mt1"></h3>
+            <h3 id="valorTotalPecas"></h3>
         </div>
     </div>
-
     <div id="tela2" class="component hidden">
         <div class="componentHeader">
             <h1 class="componentTitle">
@@ -49,11 +52,11 @@
         </div>
         <div class="componentContent">
             <div class="field">
-                <label for="inputNovaPeca">Descrição:</label>
+                <label for="inputNovaPeca" class="fifth">Descrição:</label>
                 <input id="inputNovaPeca" type="text" placeholder="Ex: RTX 3080 TI" autocomplete="off">
             </div>
             <div class="field mt1">
-                <label for="inputValorPeca">Valor:</label>
+                <label for="inputValorPeca" class="fifth">Valor:</label>
                 <input id="inputValorPeca" type="number"  step="any" placeholder="1000" autocomplete="off">
             </div>
             <div class="buttonGroup mt1 end">
@@ -71,15 +74,21 @@
         </div>
         <div class="componentContent">
             <div class="field">
-                <label for="inputEditarPeca">Descrição da peça:</label>
+                <label for="inputEditarPeca" class="fifth">Descrição:</label>
                 <input id="inputEditarPeca" type="text" autocomplete="off">
-        </div>
+            </div>
+            <div class="field mt1">
+                <label for="inputEditarValorPeca" class="fifth">Valor:</label>
+                <input id="inputEditarValorPeca" type="number"  step="any" autocomplete="off">
+            </div>
         <div class="buttonGroup end mt1">
             <button id="buttonCanc2" class="button quarter light">Cancelar</button>
             <button id="buttonSalvarAlt" class="button quarter primary">Salvar</button>
         </div>
         <div class="buttonGroup end mt1">
             <button id="buttonExcluir" class="button quarter danger">Excluir</button>
+    </div>
+    </div>
     </div>
 </body>
 </html>
